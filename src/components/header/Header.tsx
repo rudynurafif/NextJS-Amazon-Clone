@@ -4,15 +4,16 @@ import cartIcon from '@/images/cartIcon.png';
 import { BiCaretDown } from 'react-icons/bi';
 import { HiOutlineSearch } from 'react-icons/hi';
 import { SlLocationPin } from 'react-icons/sl';
+import Link from 'next/link';
 
 const Header = () => {
   return (
     <div className='w-full h-20 bg-amazon_blue text-lightText sticky top-0 z-50'>
       <div className='h-full w-full mx-auto inline-flex items-center justify-between gap-1 mdl:gap-3 px-4'>
         {/* Logo */}
-        <div className='hover-effect flex'>
+        <Link href={'/'} className='hover-effect flex'>
           <Image className='w-28 object-cover' src={logo} alt='logoImg' />
-        </div>
+        </Link>
 
         {/* deliver */}
         <div className='hover-effect hidden xl:inline-flex gap-1'>
@@ -53,17 +54,17 @@ const Header = () => {
         </div>
 
         {/* cart */}
-        <div className='hover-effect flex relative'>
+        <Link href={'/cart'} className='hover-effect flex relative'>
           <Image
             className='w-auto object-cover h-8'
             src={cartIcon}
             alt='cartImg'
           />
           <p className='text-xs text-white font-bold mt-3'>Cart</p>
-          <span className='absolute text-amazon_yellow text-sm top-2 left-[29px] font-semibold'>
+          <span className='absolute text-amazon_yellow text-sm top-2 left-[30px] font-semibold'>
             0
           </span>
-        </div>
+        </Link>
       </div>
     </div>
   );
