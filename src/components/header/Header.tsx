@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import logo from '@/images/logo.png';
-import cartIcon from '@/images/cartIcon.png';
-import { BiCaretDown } from 'react-icons/bi';
-import { HiOutlineSearch } from 'react-icons/hi';
-import { SlLocationPin } from 'react-icons/sl';
-import Link from 'next/link';
+import Image from 'next/image'
+import logo from '@/images/logo.png'
+import cartIcon from '@/images/cartIcon.png'
+import { BiCaretDown } from 'react-icons/bi'
+import { HiOutlineSearch } from 'react-icons/hi'
+import { SlLocationPin } from 'react-icons/sl'
+import Link from 'next/link'
 
 const Header = () => {
   return (
@@ -12,7 +12,7 @@ const Header = () => {
       <div className='h-full w-full mx-auto inline-flex items-center justify-between gap-1 mdl:gap-3 px-4'>
         {/* Logo */}
         <Link href={'/'} className='hover-effect flex'>
-          <Image className='w-28 object-cover' src={logo} alt='logoImg' />
+          <Image className='w-28 object-cover mt-1' src={logo} alt='logoImg' />
         </Link>
 
         {/* deliver */}
@@ -55,11 +55,7 @@ const Header = () => {
 
         {/* cart */}
         <Link href={'/cart'} className='hover-effect flex relative'>
-          <Image
-            className='w-auto object-cover h-8'
-            src={cartIcon}
-            alt='cartImg'
-          />
+          <Image className='w-auto object-cover h-8' src={cartIcon} alt='cartImg' />
           <p className='text-xs text-white font-bold mt-3'>Cart</p>
           <span className='absolute text-amazon_yellow text-sm top-2 left-[30px] font-semibold'>
             0
@@ -67,7 +63,7 @@ const Header = () => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

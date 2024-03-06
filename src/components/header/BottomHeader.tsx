@@ -1,4 +1,4 @@
-import { LuMenu } from 'react-icons/lu';
+import { LuMenu } from 'react-icons/lu'
 
 const BottomHeader = () => {
   return (
@@ -15,7 +15,7 @@ const BottomHeader = () => {
         Sign Out
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default BottomHeader;
+export default BottomHeader

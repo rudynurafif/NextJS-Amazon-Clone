@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import logo from '@/images/logo.png';
+import Image from 'next/image'
+import logo from '@/images/logo.png'
 
 const Footer = () => {
   return (
-    <div className='w-full h-20 bg-amazon_light text-gray-300 flex items-center justify-center gap-4 fixed bottom-0'>
+    <div className='w-full h-20 bg-amazon_light text-gray-300 flex items-center justify-center gap-4 bottom-0'>
       <Image className='w-24' src={logo} alt='logo' />
       <p className='text-sm -mt-4'>
         All right reserved{' '}
@@ -16,7 +16,7 @@ const Footer = () => {
         </a>
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
