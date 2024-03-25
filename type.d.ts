@@ -24,7 +24,7 @@ export interface StoreProduct {
 }
 
 export interface StateProps {
-  productData: [];
+  cartData: [];
   favoriteData: [];
   userInfo: null | string;
   next: any;

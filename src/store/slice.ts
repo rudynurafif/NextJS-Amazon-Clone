@@ -3,14 +3,14 @@ import { StoreProduct } from '../../type';
 import { stat } from 'fs';
 
 interface NextState {
-  productData: StoreProduct[];
+  cartData: StoreProduct[];
   favoriteData: StoreProduct[];
   allProducts: StoreProduct[];
   userInfo: null | string;
 }
 
 const initialState: NextState = {
-  productData: [],
+  cartData: [],
   favoriteData: [],
   allProducts: [],
   userInfo: null,
@@ -21,13 +21,13 @@ export const nextSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const existingProduct = state.productData.find(
+      const existingProduct = state.cartData.find(
         (item: StoreProduct) => item._id === action.payload._id
       );
       if (existingProduct) {
         existingProduct.quantity += action.payload.quantity;
       } else {
-        state.productData.push(action.payload);
+        state.cartData.push(action.payload);
       }
     },
 
@@ -43,14 +43,14 @@ export const nextSlice = createSlice({
     },
 
     increaseQuantity: (state, action) => {
-      const existingProduct = state.productData.find(
+      const existingProduct = state.cartData.find(
         (item: StoreProduct) => item._id === action.payload._id
       );
       existingProduct && existingProduct.quantity++;
     },
 
     decreaseQuantity: (state, action) => {
-      const existingProduct = state.productData.find(
+      const existingProduct = state.cartData.find(
         (item: StoreProduct) => item._id === action.payload._id
       );
       if (existingProduct?.quantity === 1) {
@@ -60,14 +60,12 @@ export const nextSlice = createSlice({
       }
     },
 
-    deleteProduct: (state, action) => {
-      state.productData = state.productData.filter(
-        (item) => item._id !== action.payload._id
-      );
+    deleteProductFromCart: (state, action) => {
+      state.cartData = state.cartData.filter((item) => item._id !== action.payload);
     },
 
     resetCart: (state) => {
-      state.productData = [];
+      state.cartData = [];
     },
 
     addUser: (state, action) => {
@@ -89,7 +87,7 @@ export const {
   addToFavorite,
   increaseQuantity,
   decreaseQuantity,
-  deleteProduct,
+  deleteProductFromCart,
   resetCart,
   addUser,
   removeUser,

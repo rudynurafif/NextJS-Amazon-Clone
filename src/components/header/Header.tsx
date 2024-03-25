@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import { StateProps } from '../../../type';
 
 const Header = () => {
-  const { productData, favoriteData } = useSelector((state: StateProps) => state.next);
+  const { cartData, favoriteData } = useSelector((state: StateProps) => state.next);
 
   return (
     <div className='w-full h-20 bg-amazon_blue text-lightText sticky top-0 z-50'>
@@ -67,7 +67,7 @@ const Header = () => {
           <Image className='w-auto object-cover h-8' src={cartIcon} alt='cartImg' />
           <p className='text-xs text-white font-bold mt-3'>Cart</p>
           <span className='absolute text-amazon_yellow text-sm top-2 left-[30px] font-semibold'>
-            {productData ? productData.length : 0}
+            {cartData ? cartData.length : 0}
           </span>
         </Link>
       </div>

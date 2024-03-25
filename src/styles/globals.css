@@ -10,6 +10,10 @@
   }
 
   .hover-effect-2 {
-    @apply text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%] rounded
+    @apply text-xs text-gray-100 flex flex-col justify-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%] rounded;
+  }
+
+  .qty-cart-hover {
+    @apply w-6 h-6 flex items-center justify-center rounded-full text-base bg-transparent hover:bg-gray-300 cursor-pointer decoration-purple-300;
   }
 }

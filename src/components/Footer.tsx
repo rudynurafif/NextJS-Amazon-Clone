@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import logo from '@/images/logo.png'
+import Image from 'next/image';
+import logo from '@/images/logo.png';
 
 const Footer = () => {
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
         </a>
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

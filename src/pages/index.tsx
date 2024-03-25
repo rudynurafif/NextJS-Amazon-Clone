@@ -1,9 +1,9 @@
-import Banner from '@/components/Banner'
-import Products from '@/components/Products'
-import { ProductProps } from '../../type'
+import Banner from '@/components/Banner';
+import Products from '@/components/Products';
+import { ProductProps } from '../../type';
 
 interface Props {
-  productData: ProductProps
+  productData: ProductProps;
 }
 
 export default function Home({ productData }: Props) {
@@ -16,13 +16,13 @@ export default function Home({ productData }: Props) {
         </div>
       </div>
     </main>
-  )
+  );
 }
 
 // SSR data fetching
 export const getServerSideProps = async () => {
-  const res = await fetch('https://fakestoreapiserver.reactbd.com/tech')
-  const productData = await res.json()
+  const res = await fetch('https://fakestoreapiserver.reactbd.com/tech');
+  const productData = await res.json();
 
-  return { props: { productData } }
-}
+  return { props: { productData } };
+};
