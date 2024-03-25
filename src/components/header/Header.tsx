@@ -7,7 +7,7 @@ import { SlLocationPin } from 'react-icons/sl';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import { StateProps } from '../../../type';
-import { useSession, signIn, signOut } from 'next-auth/react';
+import { useSession, signIn } from 'next-auth/react';
 import { useEffect } from 'react';
 import { addUser } from '@/store/slice';
 

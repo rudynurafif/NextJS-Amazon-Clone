@@ -13,7 +13,7 @@ const BottomHeader = () => {
   };
 
   return (
-    <div className='w-full h-10 bg-a  mazon_light text-sm text-white px-4 flex items-center gap-1'>
+    <div className='w-full h-10 bg-amazon_light text-sm text-white px-4 flex items-center gap-1'>
       <p className='hover-effect flex gap-1'>
         <LuMenu /> All
       </p>
