@@ -5,22 +5,10 @@ import { IoMdClose } from 'react-icons/io';
 import FormattedPrice from './FormattedPrice';
 import { useDispatch } from 'react-redux';
 import { decreaseQuantity, deleteProductFromCart, increaseQuantity } from '@/store/slice';
-
-interface Item {
-  _id: number;
-  title: string;
-  description: string;
-  oldPrice: number;
-  price: number;
-  brand: string;
-  image: string;
-  isNew: boolean;
-  category: string;
-  quantity: number;
-}
+import { StoreProduct } from '../../type';
 
 interface CartProductProps {
-  item: Item;
+  item: StoreProduct;
 }
 
 const CartProduct = ({ item }: CartProductProps) => {

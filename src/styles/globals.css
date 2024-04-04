@@ -16,4 +16,12 @@
   .qty-cart-hover {
     @apply w-6 h-6 flex items-center justify-center rounded-full text-base bg-transparent hover:bg-gray-300 cursor-pointer decoration-purple-300;
   }
+
+  .add-to-cart-button {
+    @apply h-10 font-medium text-white bg-amazon_blue rounded-md hover:bg-amazon_yellow hover:text-black duration-300 mt-2;
+  }
+
+  .reset-button {
+    @apply w-44 h-10 font-semibold bg-red-600 rounded-lg hover:bg-red-800 text-white duration-300;
+  }
 }

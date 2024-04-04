@@ -136,7 +136,7 @@ const Products = ({ productData }: any) => {
                     })
                   )
                 }
-                className='h-10 font-medium text-white bg-amazon_blue rounded-md hover:bg-amazon_yellow hover:text-black duration-300 mt-2'
+                className='add-to-cart-button'
               >
                 add to cart
               </button>
