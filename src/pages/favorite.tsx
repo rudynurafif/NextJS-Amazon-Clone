@@ -9,7 +9,7 @@ const FavoritePage = () => {
   const { favoriteData } = useSelector((state: StateProps) => state.next);
 
   return (
-    <div className='max-w-screen-xl mx-auto px-6 gap-10 py-4'>
+    <div className='max-w-screen-2xl mx-auto px-6 gap-10 py-4'>
       {favoriteData.length > 0 ? (
         <div>
           <div className='bg-white p-4 rounded-lg'>
