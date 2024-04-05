@@ -129,7 +129,7 @@ const Header = () => {
               alt='userImage'
               className='w-8 h-8 rounded-full object-cover'
             />
-            <div className='text-xs text-gray-100 flex-col justify-between'>
+            <div className='max-sml:hidden text-xs text-gray-100 flex-col justify-between'>
               <p className='text-white font-bold'>{userInfo.name}</p>
               <p>{userInfo.email}</p>
             </div>
@@ -161,7 +161,7 @@ const Header = () => {
         <Link href={'/cart'} className='hover-effect flex relative'>
           <Image className='w-auto object-cover h-8' src={cartIcon} alt='cartImg' />
           <p className='text-xs text-white font-bold mt-3'>Cart</p>
-          <span className='absolute text-amazon_yellow text-sm top-2 left-[30px] font-semibold'>
+          <span className='absolute text-amazon_yellow text-sm top-2 md:left-[30px] left-[27px] font-semibold'>
             {cartData ? cartData.length : 0}
           </span>
         </Link>
