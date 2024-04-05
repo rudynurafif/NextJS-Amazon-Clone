@@ -5,12 +5,14 @@ import CartProduct from '@/components/CartProduct';
 import ResetCart from '@/components/ResetCart';
 import Link from 'next/link';
 import CartPayment from '@/components/CartPayment';
+import Meta from '@/components/Meta';
 
 const CartPage = () => {
   const { cartData } = useSelector((state: StateProps) => state.next);
 
   return (
     <div className='max-w-screen-2xl mx-auto px-6 grid grid-cols-5 gap-10 py-4'>
+      <Meta title='Cart Page' />
       {cartData.length > 0 ? (
         <>
           <div className='bg-white col-span-4 p-4 rounded-lg'>

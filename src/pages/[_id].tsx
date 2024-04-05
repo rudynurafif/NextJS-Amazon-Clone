@@ -1,4 +1,5 @@
 import FormattedPrice from '@/components/FormattedPrice';
+import Meta from '@/components/Meta';
 import { addToCart, addToFavorite } from '@/store/slice';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -23,6 +24,7 @@ const DynamicPage = () => {
 
   return (
     <div className='max-w-screen-xl mx-auto px-4 py-4 md:py-10'>
+      <Meta title={product.title} description={product.description} />
       {isLoading ? (
         <div className='w-full flex flex-col gap-6 items-center justify-center py-20'>
           <p>Your product is loading...</p>

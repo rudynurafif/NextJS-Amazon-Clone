@@ -6,22 +6,25 @@ import { persistor, store } from '@/store/store';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { SessionProvider } from 'next-auth/react';
+import { HelmetProvider } from 'react-helmet-async';
 
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
 }: AppProps) {
   return (
-    <Provider store={store}>
-      <PersistGate persistor={persistor} loading={null}>
-        <SessionProvider session={session}>
-          <div className='font-bodyFont bg-gray-300'>
-            <RootLayout>
-              <Component {...pageProps} />
-            </RootLayout>
-          </div>
-        </SessionProvider>
-      </PersistGate>
-    </Provider>
+    <HelmetProvider>
+      <Provider store={store}>
+        <PersistGate persistor={persistor} loading={null}>
+          <SessionProvider session={session}>
+            <div className='font-bodyFont bg-gray-300'>
+              <RootLayout>
+                <Component {...pageProps} />
+              </RootLayout>
+            </div>
+          </SessionProvider>
+        </PersistGate>
+      </Provider>
+    </HelmetProvider>
   );
 }

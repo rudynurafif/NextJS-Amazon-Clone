@@ -1,3 +1,4 @@
+import Meta from '@/components/Meta';
 import { resetCart } from '@/store/slice';
 import Link from 'next/link';
 import React from 'react';
@@ -8,6 +9,7 @@ const SuccessPage = () => {
 
   return (
     <div className='flex flex-col gap-2 items-center justify-center py-20'>
+      <Meta title='Success payment' />
       <h1 className='text-2xl text-hoverBg font-semibold'>
         Thank you for shopping in Next Amazon Clone
       </h1>

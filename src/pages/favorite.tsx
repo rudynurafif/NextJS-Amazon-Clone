@@ -4,12 +4,14 @@ import { StateProps, StoreProduct } from '../../type';
 import FavoriteProduct from '@/components/FavoriteProduct';
 import ResetFavorite from '@/components/ResetFavorite';
 import Link from 'next/link';
+import Meta from '@/components/Meta';
 
 const FavoritePage = () => {
   const { favoriteData } = useSelector((state: StateProps) => state.next);
 
   return (
     <div className='max-w-screen-2xl mx-auto px-6 gap-10 py-4'>
+      <Meta title='Favorite Page' />
       {favoriteData.length > 0 ? (
         <div>
           <div className='bg-white p-4 rounded-lg'>
