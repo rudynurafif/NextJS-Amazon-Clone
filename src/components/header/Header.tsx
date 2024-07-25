@@ -60,7 +60,7 @@ const Header = () => {
         </Link>
 
         {/* deliver */}
-        <div className='hover-effect hidden xl:inline-flex gap-1'>
+        <div className='hover-effect hidden lg:inline-flex gap-1'>
           <SlLocationPin />
           <div className='text-xs'>
             <p>Deliver to</p>
@@ -147,7 +147,7 @@ const Header = () => {
         )}
 
         {/* favourite */}
-        <Link href={'/favorite'} className='hover-effect-2 relative'>
+        <Link href={'/favorite'} className='max-sm:hidden hover-effect-2 relative'>
           <p>Marked</p>
           <p className='text-white font-bold'>& Favourite</p>
           {favoriteData.length > 0 && (
@@ -161,7 +161,7 @@ const Header = () => {
         <Link href={'/cart'} className='hover-effect flex relative'>
           <Image className='w-auto object-cover h-8' src={cartIcon} alt='cartImg' />
           <p className='text-xs text-white font-bold mt-3'>Cart</p>
-          <span className='absolute text-amazon_yellow text-sm top-2 md:left-[30px] left-[27px] font-semibold'>
+          <span className='absolute text-amazon_yellow text-sm top-2 left-[29px] font-semibold'>
             {cartData ? cartData.length : 0}
           </span>
         </Link>

@@ -13,7 +13,7 @@ export default function App({
   pageProps: { session, ...pageProps },
 }: AppProps) {
   return (
-    <HelmetProvider>
+    <HelmetProvider>  
       <Provider store={store}>
         <PersistGate persistor={persistor} loading={null}>
           <SessionProvider session={session}>

@@ -15,7 +15,7 @@ const CartProduct = ({ item }: CartProductProps) => {
   const dispatch = useDispatch();
 
   return (
-    <div className='bg-gray-100 flex items-center rounded-lg gap-4'>
+    <div className='bg-gray-100 flex max-md:flex-col py-3 items-center rounded-lg gap-4'>
       <Image
         className='object-cover'
         height={150}

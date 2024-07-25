@@ -31,7 +31,7 @@ const FavoritePage = () => {
         </div>
       ) : (
         <div className='bg-white h-96 flex flex-col items-center justify-center py-5 rounded-lg shadow-lg'>
-          <h1>Your favorite is empty</h1>
+          <h1 className='text-lg font-medium'>Your favorite is empty</h1>
           <Link href='/'>
             <button className='w-52 h-10 bg-amazon_blue text-white rounded-lg text-sm font-semibold hover:bg-amazon_yellow hover:text-black duration-300 mt-2'>
               Go to Shopping

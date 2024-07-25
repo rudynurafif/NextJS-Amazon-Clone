@@ -27,7 +27,7 @@ const Products = ({ productData }: any) => {
         }: ProductProps) => (
           <div
             key={_id}
-            className='w-full bg-white text-black p-4 border-gray-300 rounded-lg group overflow-hidden'
+            className='w-full bg-white text-black p-4 border border-gray-300 rounded-lg group overflow-hidden'
           >
             <div className='w-full h-[260px] relative'>
               <Link
