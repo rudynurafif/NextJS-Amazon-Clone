@@ -147,7 +147,7 @@ const Header = () => {
         )}
 
         {/* favourite */}
-        <Link href={'/favorite'} className='max-sm:hidden hover-effect-2 relative'>
+        <Link href={'/favorite'} className='max-sml:hidden hover-effect-2 relative'>
           <p>Marked</p>
           <p className='text-white font-bold'>& Favourite</p>
           {favoriteData.length > 0 && (
