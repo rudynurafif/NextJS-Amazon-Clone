@@ -15,7 +15,7 @@ const SuccessPage = () => {
     <div className='max-w-screen-2xl mx-auto px-6 gap-10 py-4'>
       <div className='bg-white h-96 flex flex-col items-center justify-center py-5 rounded-lg shadow-lg gap-2'>
         <Meta title='Success Payment' />
-        <h1 className='text-2xl text-hoverBg font-semibold'>
+        <h1 className='text-2xl p-3 text-hoverBg font-semibold text-center'>
           Thank you for shopping in Next Amazon Clone
         </h1>
         <Link
